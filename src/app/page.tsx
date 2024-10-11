@@ -1,10 +1,30 @@
-import Image from "next/image";
+"use client"
+
+
+
+import Card from "@/components/card";
+import Header from "@/components/Header";
+import { Title } from "@/components/title";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="">
+      <header>
+        <Header />
         
+        
+      </header>
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <Title>Filmes em alta</Title>
+          <section className="flex flex-wrap gap-4" >
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </section>
+        
+        <Title>Séries em alta</Title>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         
