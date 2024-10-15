@@ -1,15 +1,31 @@
-import { Heart } from "lucide-react";
+"use client"
+
+import {useFavorite} from "@/app/hooks/useFavoritos";
+import { Bookmark, BookmarkCheck, Heart } from "lucide-react";
+import { useEffect, useState } from "react";
+
+type CardProps = {
+    filme: filme
+}
 
 
-export default function Card() {
+export default function Card({filme}: CardProps) {
 
+    const {clickFavorite, clickUnFavorite, favorite, loadFavorite}= useFavorite(filme)
+
+    useEffect( () => loadFavorite(), [])
     return (
-        <div className="flex flex-col items-center w-52">
-            <img className="rounded-xl" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mIvbfZFLJGwNvJKJcnYIppSbWdI.jpg" alt="" />
-            <h2 className="line-clamp-1" >Nome do filmes</h2>
+        <div className="flex flex-col items-center w-52 relative">
+            {(favorite)?
+            <BookmarkCheck onClick={clickUnFavorite} className="absolute right-1 top-2 cursor-pointer text-white" /> :
+            <Bookmark onClick={clickFavorite} className="absolute right-1 top-2 cursor-pointer text-white"/>}
+            
+            
+            <img className="rounded-xl" src= {"https://image.tmdb.org/t/p/w500"+filme.poster_path} alt="" />
+            <h2 className="line-clamp-1" >{filme.title}</h2>
             <div className="flex gap-1">
                 <Heart />
-                <h3>5.5</h3>
+                <h3>{filme.vote_average.toFixed(1)}</h3>
             </div>
             <a href="">detalhes</a>
 

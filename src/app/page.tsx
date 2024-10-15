@@ -1,12 +1,15 @@
-"use client"
+"use server"
 
 
 
 import Card from "@/components/card";
 import Header from "@/components/Header";
 import { Title } from "@/components/title";
+import { getMovies } from "./actions/getMovies";
 
-export default function Home() {
+export default async function Home() {
+  const filmes: filme[] = await getMovies()
+  
   return (
     <div className="">
       <header>
@@ -17,11 +20,8 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Title>Filmes em alta</Title>
           <section className="flex flex-wrap gap-4" >
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {filmes.map(filme => < Card key={filme.id} filme={filme} />)}
+            
           </section>
         
         <Title>Séries em alta</Title>
