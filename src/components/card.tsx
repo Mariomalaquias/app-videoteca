@@ -27,7 +27,7 @@ export default function Card({filme}: CardProps) {
                 <Heart />
                 <h3>{filme.vote_average.toFixed(1)}</h3>
             </div>
-            <a href="">detalhes</a>
+            <a href={"/detalhes/" + filme.id }>detalhes</a>
 
             
         </div>
