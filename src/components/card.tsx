@@ -20,8 +20,7 @@ export default function Card({filme}: CardProps) {
             <BookmarkCheck onClick={clickUnFavorite} className="absolute right-1 top-2 cursor-pointer text-white" /> :
             <Bookmark onClick={clickFavorite} className="absolute right-1 top-2 cursor-pointer text-white"/>}
             
-            
-            <img className="rounded-xl" src= {"https://image.tmdb.org/t/p/w500"+filme.poster_path} alt="" />
+            <a href={"/detalhes/" + filme.id }><img className="rounded-xl" src= {"https://image.tmdb.org/t/p/w500"+filme.poster_path} alt="" /></a>
             <h2 className="line-clamp-1" >{filme.title}</h2>
             <div className="flex gap-1">
                 <Heart />
