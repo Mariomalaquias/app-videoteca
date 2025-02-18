@@ -25,7 +25,7 @@ export default function Header() {
         <div>
             <header className="flex justify-between bg-gray-500 p-4">
                 <div className="flex items-center">
-                    <Popcorn className="text-5xl text-amber-400" />
+                    <Popcorn className=" text-amber-400 w-20 h-20 " />
                     <h1 className="text-7xl text-amber-400 font-bold ml-2">
                         <Link href="/">Videoteca</Link>
                     </h1>

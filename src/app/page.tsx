@@ -26,7 +26,6 @@ export default async function Home() {
           <section className="flex flex-wrap gap-4">
           {series.map(filme => < Card key={filme.id} filme={filme} />)}
           </section>
-        <Title>Novidades</Title>
         
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
