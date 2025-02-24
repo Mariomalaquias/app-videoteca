@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import { Title } from "@/components/title";
 import { getMovies } from "./actions/getMovies";
 import { getSeries } from "./actions/getSeries";
+import Footer from "@/components/footer";
 
 export default async function Home() {
   const filmes: filme[] = await getMovies()
@@ -28,9 +29,7 @@ export default async function Home() {
           </section>
         
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        
-      </footer>
+      <Footer />
     </div>
   );
 }
