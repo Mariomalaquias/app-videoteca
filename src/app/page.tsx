@@ -1,3 +1,4 @@
+
 "use server"
 
 import Card from "@/components/card";
@@ -25,7 +26,7 @@ export default async function Home() {
         
         <Title>Séries em alta</Title>
           <section className="flex flex-wrap gap-4">
-          {series.map(filme => < Card key={filme.id} filme={filme} />)}
+          {series.map(serie => < Card key={serie.id} filme={serie} />)}
           </section>
         
       </main>

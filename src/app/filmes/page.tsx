@@ -112,7 +112,7 @@ export default async function Home() {
       </header>
 
       <main className="flex flex-col items-center px-4 py-8 sm:px-8 md:px-16 lg:px-24 xl:px-32">
-        <Title>Filmes Populares</Title>
+        <Title>Filmes</Title>
 
         {/* Carrossel Responsivo */}
         <div className="w-full max-w-7xl">

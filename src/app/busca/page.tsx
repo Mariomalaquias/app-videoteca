@@ -36,8 +36,8 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start bg-slate-400">
-        <Title>Filmes</Title>
-        <h2 className="title">
+        <Title>Busca de filmes</Title>
+        <h2 className="title text-2xl text-amber-400 font-bold">
           Resultados para: <span className="query-text">{query}</span>
         </h2>
         <section className="flex flex-wrap gap-4">
